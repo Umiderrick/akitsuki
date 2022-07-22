@@ -35,7 +35,6 @@ public class TypeCastException extends RuntimeException{
 		this.nested = nested;
 	}
 
-	@Override
 	public String getMessage() {
 		if (nested != null)
 			return super.getMessage() + " (" + nested.getMessage() + ")";
@@ -54,21 +53,18 @@ public class TypeCastException extends RuntimeException{
 			return nested;
 	}
 
-	@Override
 	public void printStackTrace() {
 		super.printStackTrace();
 		if (nested != null)
 			nested.printStackTrace();
 	}
 
-	@Override
 	public void printStackTrace(PrintStream ps) {
 		super.printStackTrace(ps);
 		if (nested != null)
 			nested.printStackTrace(ps);
 	}
 
-	@Override
 	public void printStackTrace(PrintWriter pw) {
 		super.printStackTrace(pw);
 		if (nested != null)
